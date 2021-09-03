@@ -25,6 +25,12 @@ public extension UIView {
             prepareAndPrioritizeAndActivate(constraint.getConstraint(from: self, to: view))
         }
     }
+
+    func constrainTo(_ view: UILayoutGuide, _ constraints: [Constraint]) {
+        for constraint in constraints {
+            prepareAndPrioritizeAndActivate(constraint.getConstraint(from: self, to: view))
+        }
+    }
 }
 
 public extension Array where Element == Constraint {
